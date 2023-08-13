@@ -1,8 +1,11 @@
 package entity
 
+import "github.com/google/uuid"
+
 type Person struct {
-	name     string
-	lastname string
-	age      int
-	email    string
+	ID       uuid.UUID `db:"id"`
+	Name     string    `db:"name"`
+	Email    string    `db:"email"`
+	Password string    `db:"password"`
+	Age      int       `db:"age"`
 }
